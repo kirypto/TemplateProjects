@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Hand</title>
+</head>
+<body>
+<ul>
+    {% for card in cards %}
+        <li>{{ card.value }} of {{ card.suite }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
