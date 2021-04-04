@@ -23,10 +23,18 @@ def _run_app(*, app_config: dict, flask_construction_config: dict, flask_run_con
 
     @flask_web_app.route("/")
     @flask_web_app.route("/index")
+    @flask_web_app.route("/index.html")
     def hello_world():
         return render_template("index.html", **{
             "title": app.name,
             "summary": app.description,
+        })
+
+    @flask_web_app.route("/hand")
+    @flask_web_app.route("/hand.html")
+    def player_hand():
+        return render_template("hand.html", **{
+            "cards": app.cards
         })
 
     flask_web_app.run(**flask_run_config)
