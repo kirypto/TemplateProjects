@@ -5,7 +5,7 @@ from pathlib import Path
 from flask import Flask, render_template
 from ruamel.yaml import YAML
 
-from adapter.main import PythonFlaskTemplateApp
+from application.main import PythonFlaskTemplateApp
 
 
 _FLASK_ENV_VAR_NAME = "FLASK_ENV"
